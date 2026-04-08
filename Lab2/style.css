@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #4a90e2;
+    --danger-color: #e74c3c;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --output-bg: #1e1e1e;
+    --output-text: #00ff66;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    display: flex; justify-content: center; padding: 20px;
+}
+
+.app-container {
+    background: var(--card-bg);
+    width: 100%; max-width: 900px;
+    padding: 30px; border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.app-header { 
+    text-align: center;
+    margin-bottom: 25px; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 15px; 
+}
+
+.form-group { 
+    margin-bottom: 20px; 
+}
+
+.form-group label { 
+    display: block; 
+    font-weight: bold; 
+    margin-bottom: 8px; 
+}
+
+input[type="text"] {
+    width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px;
+    font-family: monospace; font-size: 16px;
+}
+
+.button-group { 
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 25px; 
+}
+
+.action-btn, .clear-btn {
+    flex: 1; padding: 14px; border: none; border-radius: 6px;
+    font-weight: bold; cursor: pointer; transition: 0.2s;
+}
+
+.action-btn { 
+    background: var(--primary-color); 
+    color: white; 
+}
+
+.action-btn:hover { 
+    background: #357abd; 
+}
+
+.clear-btn { 
+    background: #eee; 
+    color: #333; 
+}
+
+.clear-btn:hover { 
+    background: #ddd; 
+}
+
+.output-box-container { 
+    margin-bottom: 15px; 
+}
+
+.output-label { 
+    font-size: 14px; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+.output-box {
+    background: var(--output-bg); color: var(--output-text);
+    padding: 15px; border-radius: 6px; font-family: monospace;
+    font-size: 13px; word-break: break-all; min-height: 60px;
+}
+
+.file-input-wrapper { 
+    position: relative; 
+    border: 2px dashed #ddd; 
+    border-radius: 6px; 
+    text-align: center; 
+    padding: 20px; 
+    cursor: pointer; 
+}
+
+.file-input-wrapper input { 
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    opacity: 0; 
+    width: 100%; 
+    height: 100%; 
+    cursor: pointer; 
+}
+
+.output-box {
+    background: var(--output-bg);
+    color: var(--output-text);
+    padding: 15px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace; 
+    font-size: 13px;
+    line-height: 1.6;
+    word-break: break-all;
+    white-space: pre-wrap; 
+}

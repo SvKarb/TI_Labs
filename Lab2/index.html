@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LFSR Шифрование (Вариант 8)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Потоковое шифрование LFSR</h1>
+            <p>Вариант 8 • P(x) = x³⁰ + x¹⁶ + x¹⁵ + x + 1</p>
+        </header>
+
+        <div class="form-group">
+            <label for="initialState">Начальное состояние регистра (30 бит):</label>
+            <input type="text" id="initialState" maxlength="30" 
+                   value="111111111111111111111111111111"
+                   oninput="this.value = this.value.replace(/[^01]/g, '')">
+        </div>
+
+        <div class="form-group">
+            <label>Файл для обработки:</label>
+            <div class="file-input-wrapper">
+                <div class="btn-file">
+                    <span id="fileName">Нажмите для выбора файла</span>
+                </div>
+                <input type="file" id="fileInput">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="action-btn" id="processBtn">Запустить обработку</button>
+            <button class="clear-btn" id="clearBtn">Очистить</button>
+        </div>
+
+        <div class="results-section">
+            <div class="output-box-container">
+                <div class="output-label">Входной файл (бит)</div>
+                <div id="originalBinOutput" class="output-box">Ожидание...</div>
+            </div>
+
+            <div class="output-box-container">
+                <div class="output-label">Ключевой поток (бит)</div>
+                <div id="keyOutput" class="output-box">Ожидание...</div>
+            </div>
+
+            <div class="output-box-container">
+                <div class="output-label">Результат (бит)</div>
+                <div id="encryptedBinOutput" class="output-box">Ожидание...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lfsr.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
