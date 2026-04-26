@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Эль-Гамаль Лабораторная №3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Криптосистема Эль-Гамаля</h1>
+        
+        <div class="section">
+            <label>Введите простое число p (>255):</label>
+            <input type="number" id="inputP" value="467">
+            <button onclick="handleFindRoots()">Найти корни</button>
+        </div>
+
+        <div id="rootsSection" class="section hidden">
+            <label id="rootsCount">Найдено первообразных корней:</label>
+            <label>Выберите первообразный корень g:</label>
+            <select id="selectG"></select>
+        </div>
+
+        <div class="section">
+            <label>Введите секретный ключ x (1 < x < p-1):</label>
+            <input type="number" id="inputX" value="127">
+        </div>
+
+        <div class="section">
+            <label>Введите сессионный ключ k (1 < k < p-1):</label>
+            <input type="number" id="inputK" value="43">
+        </div>
+
+        <div class="section">
+            <h3>Работа с файлом</h3>
+            <input type="file" id="fileInput">
+            <div class="actions">
+                <button onclick="processFile('encrypt')">Зашифровать</button>
+                <button onclick="processFile('decrypt')">Расшифровать</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Исходный файл:</h3>
+            <textarea id="inputDisplay" readonly></textarea>
+
+            <h3>Преобразованный файл:</h3>
+            <textarea id="outputDisplay" readonly></textarea>
+        </div>
+    </div>
+    <script src="js/math.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
